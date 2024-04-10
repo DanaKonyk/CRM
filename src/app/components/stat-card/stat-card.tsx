@@ -8,7 +8,7 @@ export enum StatCardType {
 }
 
 export interface StatCardProps {
-  type: StatCardProps;
+  type: StatCardType;
   label: string;
   counter: number;
 }
