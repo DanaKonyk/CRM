@@ -5,7 +5,7 @@ import StatCard, { StatCardType } from '@/app/components/stat-card';
 export interface PageProps {}
 
 const labelByStat = {
-  promotions: 'Total Promotions',
+  promotions: 'Total promotions',
   categories: 'Total categories',
   newCompanies: 'New companies',
   activeCompanies: 'Total active companies',
