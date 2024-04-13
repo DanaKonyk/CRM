@@ -25,7 +25,7 @@ export default function CompanyRow({ company }: CompanyRowProps) {
           <Image
             width={16}
             height={16}
-            src={`/icons/${company.hasPromotion ? 'check' : 'x-mark'}.svg`}
+            src={`/icons/${company.hasPromotions ? 'check' : 'x-mark'}.svg`}
             alt="promotion icon"
           />
           <span
