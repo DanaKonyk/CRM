@@ -31,10 +31,10 @@ export default function CompanyRow({ company }: CompanyRowProps) {
           <span
             className={clsx(
               'text-sm font-medium',
-              company.hasPromotion ? 'text-green-700' : 'text-red-700',
+              company.hasPromotions ? 'text-green-700' : 'text-red-700',
             )}
           >
-            {company.hasPromotion ? 'Yes' : 'No'}
+            {company.hasPromotions ? 'Yes' : 'No'}
           </span>
         </div>
       </td>
