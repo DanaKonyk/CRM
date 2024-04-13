@@ -36,7 +36,7 @@ export interface Company {
   description: string;
   status: CompanyStatus;
   joinedDate: string;
-  hasPromotion: boolean;
+  hasPromotions: boolean;
   categoryId: string;
   categoryTitle: string;
   countryId: string;
@@ -67,6 +67,7 @@ const sendRequest = async <T>(url: string, init?: RequestInit) => {
   if (!res.ok) {
     throw new Error(await res.text());
   }
+
   return (await res.json()) as T;
 };
 
@@ -75,7 +76,7 @@ export const getSummaryStats = (init?: RequestInit) => {
 };
 
 export const getSummarySales = (init?: RequestInit) => {
-  return sendRequest<SummarySales>(buildUrl('summary-sales'), init);
+  return sendRequest<SummarySales[]>(buildUrl('summary-sales'), init);
 };
 
 export const getCountries = (init?: RequestInit) => {
@@ -83,14 +84,14 @@ export const getCountries = (init?: RequestInit) => {
 };
 
 export const getCategories = (init?: RequestInit) => {
-  return sendRequest<Category>(buildUrl('categories'), init);
+  return sendRequest<Category[]>(buildUrl('categories'), init);
 };
 
 export const getCompanies = (init?: RequestInit) => {
-  return sendRequest<Company>(buildUrl('companies'), init);
+  return sendRequest<Company[]>(buildUrl('companies'), init);
 };
 
-export const getCompany = (id:string,init?: RequestInit) => {
+export const getCompany = (id: string, init?: RequestInit) => {
   return sendRequest<Company>(buildUrl('companies', id), init);
 };
 
