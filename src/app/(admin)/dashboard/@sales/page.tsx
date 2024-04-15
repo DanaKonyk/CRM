@@ -9,6 +9,7 @@ export interface PageProps {}
 
 export default async function Page({}: PageProps) {
   const data = await getSummarySales();
+  console.log(data);
 
   return (
     <DashboardCard label="Sales details">

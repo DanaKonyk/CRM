@@ -4,7 +4,7 @@ import StatCard, { StatCardType } from '@/app/components/stat-card';
 
 export interface PageProps {}
 
-const labelByStat = {
+const labelByStat: Record<keyof SummaryStats, string> = {
   promotions: 'Total promotions',
   categories: 'Total categories',
   newCompanies: 'New companies',
